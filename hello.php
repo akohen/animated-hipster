@@ -12,6 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -36,45 +37,24 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="hello.html">Bonjour</a></li>
+            <li><a href="#">Bonjour</a></li>
             <li><a href="fail.html">Fail</a></li>
-            <li><a href="hello.php">PHP</a></li>
+            <li class="active"><a href="hello.php">PHP</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      </div>
-    </div>
+    <div class="container text-center">
+    <h2>Bonjour <?=$_POST['prenom']?></h2>
+    <form method="post" action="hello.php">
+      <input type="text" name="prenom" placeholder="Ton prénom" />
+      <input type="submit" value="Envoyer" />
+    </form>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Hello world</h2>
-          <p>Un petit exercice pour apprendre à travailler à plusieurs sur une même page! </p>
-          <p><a class="btn btn-default" href="hello.html" role="button">Voir la page »</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Une erreur dans le code</h2>
-          <p>Un dev saoul a mis le bordel dans la page. </p>
-          <p><a class="btn btn-default" href="fail.html" role="button">Voir la page »</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Page dynamique</h2>
-          <p>Une page pour apprendre le fonctionnement du PHP.</p>
-          <p><a class="btn btn-default" href="hello.php" role="button">Voir la page »</a></p>
-        </div>
-      </div>
-
-      <hr>
 
     </div> <!-- /container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
